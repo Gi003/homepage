@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiemnt 4 - LOVE IN 3D</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load libraries -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+	</script>
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+	<script src="js/engine.js" defer></script>
+    <script src="js/rules.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+</head>
+<body>
+	<main id="content">
+		<section>
+
+			<h1>Experiment 5 -Space through Words</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- P5js container added here -->
+
+					<div id="window">
+						<div id="contents">
+							<p id="text"></p>
+							<div id="controls"></div>
+						</div>
+					</div>
+					
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>	For this project I knew I wanted to make an interactive story art piece. I wanted to make it 
+					ambitiously large, with over 20 locations in the game. For this I decided I wasnt going to hard code any of
+					the playability and I learned how to deal with JSON parsing in js. I also wanted to make a cool anima
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>Overall I created a literary story device by making two classes which would add or delete buttons and text and other DOM elements according to what was read from a JSON file. I added around 15 locations to this game.
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p></p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>

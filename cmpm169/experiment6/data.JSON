@@ -1,0 +1,77 @@
+{
+    "Intro": "Well hello there what is your name",
+    "Variables": {"Name":"?"},
+    "World": {
+        "Living_room": {
+            "Text": "You are in the living room. The air hums with a forgotten warmth, as if someone just left. Shadows linger in the corners, patient and knowing.",
+            "Edges": ["Gallery", "Bathroom", "Library", "Kitchen", "Garden", "Basement", "Attic", "Street"],
+            "Window": "You press your forehead against the cold glass. Outside, the world breathes in slow motion."
+        },
+        "Gallery": {
+            "Text": "You walk through endless corridors, each turn folding into another. Frames hang on the walls, but the paintings are missing.",
+            "Edges": ["Library"]
+        },
+        "Library": {
+            "Text": "You step into the library. The air is thick with the scent of dust and ink. Shelves stretch upward into the dimness, their contents whispering without sound.",
+            "Edges": ["Bathroom"],
+            "Records": "You run your fingers over the records. The grooves feel like ghostly fingerprints of forgotten songs.",
+            "Record_player": "You lean closer to the record player. The needle hovers just above the vinyl, as if waiting for permission to sing."
+        },
+        "Bathroom": {
+            "Text": "The bathroom is cold, the mirror fogged despite the silence. The tap drips in a slow, deliberate rhythm.",
+            "Edges": ["Kitchen"],
+            "Carpet": "You lift the corner of the carpet. A key glints in the dim light, waiting to be noticed.",
+            "Faucet": "You twist the handle. The pipes groan, and a stream of water coughs itself into existence."
+        },
+        "Kitchen": {
+            "Text": "You step into the kitchen. The scent of something burnt lingers, but the source is long gone.",
+            "Edges": ["Dining_room"],
+            "Fridge": "You open the fridge. Light flickers against glass jars filled with things you don’t recognize."
+        },
+        "Dining_room": {
+            "Text": "The dining room is frozen in time. Plates are set, glasses untouched. The chairs feel like they are waiting for ghosts to sit down.",
+            "Edges": ["Garden"],
+            "Candles": "You light the candles. Shadows begin to dance along the walls, stretching long and thin."
+        },
+        "Garden": {
+            "Text": "You step into the garden. Vines creep over forgotten statues, wildflowers blooming in defiance of neglect.",
+            "Edges": ["Shed"],
+            "Statue": "You gaze into the statue’s eyes. For a moment, you swear they are gazing back."
+        },
+        "Shed": {
+            "Text": "You enter the shed. The scent of rust and old wood wraps around you. Something here remembers more than it should.",
+            "Edges": ["Basement"],
+            "Workbench": "You run your hand along the workbench. A rusted saw rests there, as if waiting for one last task."
+        },
+        "Basement": {
+            "Text": "You descend into the basement. The air is damp, thick with the weight of things left behind.",
+            "Edges": ["Attic"],
+            "Chest": "You open the chest. Inside, a bundle of letters tied with brittle ribbon, their words locked in time."
+        },
+        "Attic": {
+            "Text": "You climb into the attic. Dust swirls in the dim light, the air heavy with forgotten memories.",
+            "Edges": ["Street"],
+            "Trunk": "You pry open the trunk. Inside, an old photograph—faces staring back at you, familiar yet unknown."
+        },
+        "Street": {
+            "Text": "You step outside. The street stretches ahead, empty and humming with the absence of footsteps.",
+            "Edges": ["Park", "Train_station", "Hotel"],
+            "Bench": "You sit on the bench. The silence presses against you like a second skin."
+        },
+        "Park": {
+            "Text": "The park is restless, leaves murmuring secrets to the wind. The pond reflects the sky, but something stirs beneath the surface.",
+            "Edges": ["Train_station"],
+            "Pond": "You kneel at the edge of the pond. Ripples break the reflection, distorting the sky into something unrecognizable."
+        },
+        "Train_station": {
+            "Text": "You arrive at the train station. The tracks stretch into the horizon, disappearing into a place that may not exist.",
+            "Edges": ["Hotel"],
+            "Ticket_booth": "You check the ticket booth. The drawer is open, but no tickets remain."
+        },
+        "Hotel": {
+            "Text": "You step into the hotel lobby. The air is thick with the scent of old fabric and something more elusive, like a memory slipping through your fingers.",
+            "Edges": [],
+            "Elevator": "You press the elevator button. The doors remain shut, as if the building itself refuses to move."
+        }
+    }
+}

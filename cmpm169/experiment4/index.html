@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Experiemnt 4 - LOVE IN 3D</title>
+
+	<!-- Use UTF character set, a good idea with any webpage -->
+	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- Include CSS file, including a site-wide CSS and for this particular page -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Load libraries -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.9.2/lib/p5.js"></script>
+	<!-- Import map -->
+	<script type="importmap">
+		{
+			"imports": {
+				"three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+				"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+			}
+		}
+	</script>
+
+
+	<!-- Link to javascript files - DEFER waits until all elements are rendered -->
+    <script type="module" src="./js/project.js" DEFER></script>
+	<script type="text/javascript" src="./js/sketch.js" DEFER></script>
+</head>
+<body>
+	<main id="content">
+		<section>
+
+			<h1>Experiment 4 - BedRoom</h1>
+
+			<div class="minor-section">
+				<div id="canvas-container">
+					<!-- P5js container added here -->
+				</div>
+                <div class="fullscreen-box">
+                    <button id="fullscreen">Fullscreen</button>
+                </div>
+			</div>
+
+			<div class="minor-section">
+				<h2>Description</h2>
+				<p>For this assignment I decided to branch out from p5js and code with three.js exclusively.
+					I also learned blender in order to 3D model assets and position them into an interactive 3D scene 
+					resembling my bedroom with 2D shapes. This project is late because while I was learning a lot
+					I didnt believe the outcome was impressive enough and I plan to keep working on this 
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Technical</h2>
+				<p>I learned three js and how to set up a camera, scene, materials and mesh along with importing extensions to 
+					three js in an importmap which I had never used. I also learned the geometric primitives in blender 
+					and how to position and rotate them 
+				</p>
+			</div>
+
+			<div class="minor-section">
+				<h2>Reflection</h2>
+				<p>I might say this was my least favorite experiment yet and I think that is due to my lack of inspiration for this topic.
+				</p>
+			</div>
+
+		</section>
+		<nav id="links" class="minor-section">
+			<!-- Put link back to homepage here. -->
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+		</nav>
+	</main>
+</body>
+</html>
