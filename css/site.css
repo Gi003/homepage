@@ -1,0 +1,179 @@
+
+body {
+  margin: 0px
+}
+
+a {
+  text-decoration: none;
+}
+
+/** Main--------------------------------------------------------------------------------------------- */
+
+.main-flexbox {
+  display: flex;
+}
+
+p {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+}
+
+.right-content, .right-content div {
+  background-color: rgb(255, 255, 255);
+}
+
+#label {
+  font-size: 10em;
+  margin: 0% 5% 0 0;
+  text-align: left;
+  line-height: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Left section--------------------------------------------------------------------------------------- */
+
+.left-content {
+  width: 50%;
+  height: 100vh;
+
+  position: fixed;
+  z-index: -1;
+}
+
+.left-pseudo {
+  width: 50%;
+  height: 100vh;
+}
+
+/*Marginal left content------------------------------------------------------------- */
+
+#main-title {
+  font-size: 8em;
+  text-align: right;
+  margin: 10%;
+
+  color: rgb(76,50,223);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-image {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.bottom-icons {
+  width:100%;
+  
+  bottom: 2.5%;
+  display:flex;
+  position: absolute;
+  justify-content: center;
+}
+
+#insta {
+  width: 40px;
+  margin: 0 2.5% 0 0;
+}
+
+#youtube {
+  width: 40px;
+  margin: 0 10% 0 0;
+  margin: 0 0 0 2.5%;
+}
+
+
+/*Right Section-------------------------------------------------------------------------------------- */
+
+.right-content {
+  width: 50%;
+}
+
+/* Marginal grid content------------------------- */
+
+.body-content {
+  width: 100%;
+
+  display: grid;
+  margin: 0% 0% 40px 0%;
+  grid-template-columns: 40% 60%;
+
+}
+
+.title-spacer { 
+  width:auto;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  background-color: aqua;
+}
+
+/*--------THUMBNAILS-------------------------------*/
+
+.small-thumbnail {
+  width: 175px;
+  height: 90px;
+
+  grid-row-start: 2;
+  grid-row-end: 4;
+
+  margin: 0% auto 0% 7%;
+
+  border-radius: 45px;
+  background-color: rgb(147, 0, 0);
+  overflow: hidden;
+}
+
+.small-thumbnail img {
+  width:100%;
+}
+
+.big-thumbnail {
+  /*width: 422px;
+  height: 250px;*/
+  width: 83%;
+  height: auto;
+  
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: 0% 15% 5% 0%; 
+  display:flex;
+
+  border-radius: 30px;
+  background-color: red;
+  overflow: hidden;
+  align-items: center;
+}
+
+.big-thumbnail img {
+  width:100%;
+}
+
+/*--------TEXT---------------------------------------*/
+
+.titles p {
+  font-size: 7em;
+  line-height: 100%;
+
+  margin: 0% 0% 5% 0%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.description {
+  grid-column-start: -2;
+  grid-column-end:-1;
+}
+.description p {
+  margin: 0% 17% 0% 0%;
+  font-style: italic;
+
+}
+
