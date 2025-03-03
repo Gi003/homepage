@@ -1,0 +1,75 @@
+html{
+    margin:0;
+    padding:0;
+}
+
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
+
+.vis {
+    background-color: rgb(var(--rand),var(--rand),var(--rand));
+}
+
+/* Navigation Bar ------------------------------------------------------------------------- */
+#nav_pad{
+    height:5vh;
+}
+
+#nav{
+    display: flex;
+    justify-content: space-between;
+    height:5vh;
+}
+
+#nav-left {
+    display:flex;
+    gap:5%;
+
+}
+
+.nav-button {
+    margin: 1vh;
+    height: 1.5em;
+    width: 2.5em;
+    
+    background-color: coral;
+    border-radius: 20px;
+}
+
+/* Gallery contents ---------------------------------------------------------------------*/
+
+#array{
+    width:400vw;
+    height:95vh;
+    display:flex;
+    transition: transform 0.8s;
+}
+
+.page{
+    width:100vw;
+    height:95vh;
+    position:relative;
+}
+
+.image_container{
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    /* I want to constrain the amount of border around the image not the images 
+    max size or max width. When i do that its hard to tell due to the different aspect ratios of each one */
+    left:50vw;
+    top: 50%;
+    transform: translate(-50%,-50%);   
+     /* WARNING--- image overflows div, simply centered with flex */
+    justify-content: center;
+    display: flex;
+}
+
+img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
