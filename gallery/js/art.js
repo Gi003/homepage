@@ -71,6 +71,8 @@ img_nodelist.forEach((img) => {
     let img_container = img.parentNode
     let isExpanded = false;
 
+    //The expansion event listener might have to be 
+    //larger area than image container
     img.addEventListener('click', () => {
         if(!isExpanded) {
             img_container.style.width = '40%'
