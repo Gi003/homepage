@@ -1,6 +1,7 @@
 
 body {
-  margin: 0px
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 a {
@@ -37,8 +38,6 @@ p {
   height: 100vh;
 }
 
-/*Marginal left content------------------------------------------------------------- */
-
 #main-title {
   font-size: 10em;
   text-align: right;
@@ -48,32 +47,30 @@ p {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Default to width 50% and constraint for height */
 #main-image {
-  width: 100%;
+  width: 50vw;
+  height: auto;
+
   position: absolute;
   z-index: -1;
+}
+
+/* Custom aspect overflow */
+@media (max-aspect-ratio: 1374/911) {
+  #main-image {
+    width:auto;
+    height: 100vh;
+  }
 }
 
 .bottom-icons {
   width:100%;
   
   bottom: 2.5%;
-  display:flex;
   position: absolute;
   justify-content: center;
 }
-
-#insta {
-  width: 40px;
-  margin: 0 2.5% 0 0;
-}
-
-#youtube {
-  width: 40px;
-  margin: 0 10% 0 0;
-  margin: 0 0 0 2.5%;
-}
-
 
 /*Right Section-------------------------------------------------------------------------------------- */
 
@@ -82,8 +79,6 @@ p {
   margin: 0% 5% 0 0;
   text-align: left;
   line-height: 100%;
-  grid-column-start: 2;
-  grid-column-end: 3;
 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -92,12 +87,19 @@ p {
   width: 50%;
 }
 
+.main-descriptor{
+  font-size: 1em;
+  text-align: right;
+
+}
+
+
 /* Grid content------------------------- */
 
 .body-content {
   width: 100%;
 
-  display: grid;
+  /* display: grid; */
   margin: 0% 0% 40px 0%;
   grid-template-columns: 40% 60%;
 
@@ -115,7 +117,7 @@ p {
 /*--------Entry-------------------------------*/
 
 .titles p {
-  font-size: 7em;
+  font-size: 5em;
   line-height: 100%;
 
   margin: 0% 0% 5% 0%;
@@ -130,16 +132,12 @@ p {
 .big-thumbnail {
   width: 83%;
   height: auto;
-  
-  grid-column-start: 2;
-  grid-column-end: 3;
-  margin: 0% 15% 5% 0%; 
-  display:flex;
+
+  margin: 0% auto 5% auto; 
 
   border-radius: 30px;
   background-color: red;
   overflow: hidden;
-  align-items: center;
 }
 
 .big-thumbnail img {

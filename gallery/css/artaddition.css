@@ -10,7 +10,7 @@ body{
 }
 
 .vis {
-    background-color: rgb(var(--rand),var(--rand),var(--rand));
+    background-color: white;
 }
 
 /* Navigation Bar ------------------------------------------------------------------------- */
@@ -62,10 +62,23 @@ body{
     max size or max width. When i do that its hard to tell due to the different aspect ratios of each one */
     left:50vw;
     top: 50%;
-    transform: translate(-50%,-50%);   
-     /* WARNING--- image overflows div, simply centered with flex */
-    justify-content: center;
-    display: flex;
+    transform: translate(-50%,-50%);
+    transition: left 0.8s, width 0.8s;
+
+    z-index: 1;
+}
+
+.info{
+    position:relative;
+    width: 40%;
+    height:40%;
+
+    left:75vw;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+
+    z-index: 0;
 }
 
 img{
