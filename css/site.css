@@ -15,18 +15,24 @@ a {
 }
 
 p {
-  font-weight: bolder;
   color: rgb(0, 0, 0);
 }
 
-.right-content, .right-content div {
-  background-color: rgb(255, 255, 255);
+@font-face {
+  font-family: Helvetica;
+  src: url(./Helvetica.ttf);
 }
+
+@font-face {
+  font-family: Helvetica-Oblique;
+  src: url(./Helvetica-Oblique.ttf);
+}
+
 
 /*Left section--------------------------------------------------------------------------------------- */
 
 .left-content {
-  width: 50%;
+  width: 55.55%;
   height: 100vh;
 
   position: fixed;
@@ -34,22 +40,23 @@ p {
 }
 
 .left-pseudo {
-  width: 50%;
+  width: 55.55%;
   height: 100vh;
 }
 
-#main-title {
+#main-title-left {
   font-size: 10em;
   text-align: right;
   margin: 0;
 
   color: rgb(76,50,223);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
+  font-weight: bolder;
 }
 
 /* Default to width 50% and constraint for height */
 #main-image {
-  width: 50vw;
+  width: 55.55vw;
   height: auto;
 
   position: absolute;
@@ -68,29 +75,41 @@ p {
   width:100%;
   
   bottom: 2.5%;
+  left: 2.5%;
   position: absolute;
   justify-content: center;
 }
 
+#about{
+  height: 100px;
+  left: 2.5%;
+}
+
+
+
 /*Right Section-------------------------------------------------------------------------------------- */
 
-#label {
+#main-title-right {
   font-size: 10em;
   margin: 0% 5% 0 0;
   text-align: left;
   line-height: 100%;
+  font-family: Helvetica;
+  font-weight: bolder;
 
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .right-content {
-  width: 50%;
+  width: 44.44%;
+  right:0px;
+  background-color: rgb(255, 255, 255);
 }
 
 .main-descriptor{
   font-size: 1em;
   text-align: right;
-
+  font-family: Helvetica-Oblique;
+  margin: 2.5% 7.5% 2.5% 7.5%;
 }
 
 
@@ -108,9 +127,6 @@ p {
 .title-spacer { 
   width:auto;
 
-  grid-column-start: 1;
-  grid-column-end: 2;
-
   background-color: aqua;
 }
 
@@ -120,20 +136,19 @@ p {
   font-size: 5em;
   line-height: 100%;
 
-  margin: 0% 0% 5% 0%;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  margin: 0% 0% 2.5% 5%;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
+  font-weight: bold;
 
 }
 
 /* Thumbnail */
 .big-thumbnail {
-  width: 83%;
-  height: auto;
+  width: 80%;
+  height: 18.18vh;
 
-  margin: 0% auto 5% auto; 
+  margin: 0% auto 5% 5%; 
 
   border-radius: 30px;
   background-color: red;
@@ -146,13 +161,21 @@ p {
 
 /* Text */
 .description {
-  grid-column-start: -2;
-  grid-column-end:-1;
+  margin: 0% 5% 0% 5%;
+
 }
 
 .description p {
-  margin: 0% 17% 0% 0%;
-  font-style: italic;
+  font-family: Helvetica;
 
 }
 
+/* Line Break */
+.line_break {
+  position: relative;
+  background-color: black;
+  width: 95%;
+  height: 1px;
+  margin: 0 auto 5% auto;
+
+}
