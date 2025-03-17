@@ -91,9 +91,8 @@ p {
 
 #main-title-right {
   font-size: 10em;
-  margin: 0% 5% 0 0;
+  margin: 0% 0% 0 0;
   text-align: left;
-  line-height: 100%;
   font-family: Helvetica;
   font-weight: bolder;
 
@@ -110,6 +109,10 @@ p {
   text-align: right;
   font-family: Helvetica-Oblique;
   margin: 2.5% 7.5% 2.5% 7.5%;
+}
+
+.main-descriptor img {
+  width: 150px;
 }
 
 
