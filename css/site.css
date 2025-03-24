@@ -148,12 +148,12 @@ p {
 
 /* Thumbnail */
 .big-thumbnail {
-  width: 80%;
+  width: 90%;
   height: 18.18vh;
 
   margin: 0% auto 5% 5%; 
 
-  border-radius: 30px;
+  border-radius: 50px;
   background-color: red;
   overflow: hidden;
 }
