@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(./Helvetica.ttf);
+  }
+  
+@font-face {
+    font-family: Helvetica-Oblique;
+    src: url(./Helvetica-Oblique.ttf);
+}
+
 html{
     margin:0;
     padding:0;
@@ -14,29 +24,47 @@ body{
 }
 
 /* Navigation Bar ------------------------------------------------------------------------- */
-#nav_pad{
-    height:5vh;
-}
-
 #nav{
     display: flex;
     justify-content: space-between;
-    height:5vh;
+    height:6vh;
 }
 
 #nav-left {
     display:flex;
-    gap:5%;
+    width: 50vw;
+    align-items: center;
+}
 
+a {
+    text-decoration:none;
+}
+
+.art-label {
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 6vh;
+    line-height: 6vh;
 }
 
 .nav-button {
-    margin: 1vh;
-    height: 1.5em;
-    width: 2.5em;
+    height: 5vh;
+    width: 10vh;
+    margin: 0 0 0 15%;
     
-    background-color: coral;
-    border-radius: 20px;
+    background-color: rgb(240, 103, 53);
+    border-radius: 30px;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-button p {
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 3vh;
+    line-height: 1.5em;
+    margin: 0 auto;
 }
 
 /* Gallery contents ---------------------------------------------------------------------*/

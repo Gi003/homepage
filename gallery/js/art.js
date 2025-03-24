@@ -1,14 +1,14 @@
 //Making of visible divs------------------------------------
-let elements = document.getElementsByClassName("vis");
-console.log(elements);
-console.log(elements[0].style.backgroundColor)
+// let elements = document.getElementsByClassName("vis");
+// console.log(elements);
+// console.log(elements[0].style.backgroundColor)
 
-for (let x of elements){
-    r = Math.random() * 255;
-    g = Math.random() * 255;
-    b = Math.random() * 255;
-    x.style.backgroundColor = `rgb(${r},${g},${b})`;
-}
+// for (let x of elements){
+//     r = Math.random() * 255;
+//     g = Math.random() * 255;
+//     b = Math.random() * 255;
+//     x.style.backgroundColor = `rgb(${r},${g},${b})`;
+// }
 
 //Scrollable Gallery---------------------------------------
 let array = document.getElementById("array");
