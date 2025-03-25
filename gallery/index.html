@@ -6,9 +6,10 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/artaddition.css">
     <script src="js/art.js" defer></script>
-    <title> Gallery Page</title>
+    <title> Paintings </title>
 </head>
 <body>
+    <!-- NAVIGATION -->
     <div id="nav">
         <div id="nav-left">
             <a href="../index.html">
@@ -27,10 +28,12 @@
         </div>
     
     </div>
+    <!-- SLIDABLE -->
     <div class="vis" id="array">
         <div  class="page vis">
             <div class="vis image_container">
-                <img src="../img/gallery/angels_2024.jpg"></a>
+                <img class="thumbnail" src="../img/gallery/angels_2024.jpg"/>
+                    <div class="marker vis"></div>
             </div>
             <div class="vis info">
                 <div class="essential">Oil on Canvas Angels 2024 3' x 2'</div>
@@ -45,7 +48,8 @@
         </div>
         <div class="page vis" >
                 <div class="vis image_container">
-                    <img src="../img/gallery/apocalipsis_2024.JPG"></a>
+                    <img class="thumbnail" src="../img/gallery/apocalipsis_2024.JPG"></a>
+                    <div class="marker vis"></div>
                 </div>
                 <div class="vis info">
 
@@ -53,18 +57,25 @@
         </div>
         <div class="page vis">
                 <div class="vis image_container">
-                    <img src="../img/gallery/erotic_2025.png"></a>
+                    <img class="thumbnail" src="../img/gallery/erotic_2025.png"></a>
+                    <div class="marker vis"></div>
                 </div>
                 <div class="vis info"></div>
         </div>
         <div class="page vis">
             <div class="vis image_container">
-                <img src="../img/gallery/kresge_2024.jpg"></a>
+                <img class="thumbnail" src="../img/gallery/kresge_2024.jpg"></a>
+                <div class="marker vis"></div>
             </div>
             <div class="vis info"></div>
         </div>
     </div>
-    <hr id="length-indicator">
+    <!-- STATIC UI CONTENT -->
+    <div class="line_break"></div>
+    <div class="edge_flex"> 
+        <img class="arrow" id="left" src="./left_arrow.svg" />
+        <img class="arrow" id="right" src="./right_arrow.svg" />
+    </div>
 
 </body>
 </html>
