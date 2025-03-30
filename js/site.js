@@ -1,102 +1,93 @@
-//DOM elements
-var smallThumb = document.querySelectorAll('small-thumbnail');
-var slide = null;
-var slide1 = document.getElementById('slide1');
-var slide2 = document.getElementById('slide2');
-var slide3 = document.getElementById('slide3');
-var slide4 = document.getElementById('slide4');
-
-//image array//
-var array = null;
-var images1 = [];
-var images2 = [];
-var images3 = [];
-var images4 = [];
-var i=0;
-var time = 100;
-var active = false;
-
-//image list
-images1[0] = "img/awaken.png";
-images1[1] = "img/cloud.png";
-images1[2] = 'img/dilbert.jpg';
-images1[3] = 'img/face.jpg';
-images1[4] = 'img/swirl.jpg';
-
-//Change Image1
-   function changeImg() {
-
-      if(active == true) {
-      slide.src = array[i];
-
-      if(i < array.length - 1){
-         i++;
-         console.log(i);
-      } else {
-         i = 0;
-      }
-      setTimeout(changeImg, time);
-   }
-   }
-
-//slide 1 event listener
-//enter function 
-function go() {
-   array = images1;
-      slide = slide1;
-      active = true;
-      changeImg()
+function resizeScreen() {
+   centerHorz = canvasContainer.width() / 2 ; // Adjusted for drawing logic
+   centerVert = canvasContainer.height()/ 2; // Adjusted for drawing logic
+   console.log("Resizing...");
+   resizeCanvas(canvasContainer.width(), canvasContainer.height());
 }
 
-// $("#slide1").mouseenter(go());
+//Difraction
 
-// $("#slide1").mouseleave(
-//    () => {
-//       active = false
-//    }
-//    );
+//---------------------------------------------------------------
+class Quad{
+   constructor(tile_x, tile_y, tile_width, tile_height){
+     this.x = tile_x;
+     this.y = tile_y;
+     this.w = tile_width;
+     this.h = tile_height;
+   }
+ }
 
-// //slide2 event listeners 
+ //-------------------------------------------------------------------------------
+ 
+ let pic;
+ 
+ function preload() {
+   pic = loadImage('/img/me.jpg');
+ }
+ 
+ function setup() {
+   canvasContainer = $("#canvas-container");
+   w = canvasContainer.width();
+   h = canvasContainer.height();
+   let canvas = createCanvas(w,h);
+   canvas.parent(canvasContainer[0]);
+   resizeScreen();
 
-// $("#slide2").mouseenter(go());
-
-// $("#slide2").mouseleave(
-//    () => {
-//       active = false
-//    }
-//    );
-
-// //slide3 event listeners 
-
-// $("#slide3").mouseenter(
-//    () => { 
-//       slide = slide3;
-//       active = true;
-//       changeImg()
-//    }
-//    );
-
-// $("#slide3").mouseleave(
-//    () => {
-//       active = false
-//    }
-//    );
-
-// //slide4 event listeners 
-
-// $("#slide4").mouseenter(
-//    () => { 
-//       slide = slide4;
-//       active = true;
-//       changeImg()
-//    }
-//    );
-
-// $("#slide4").mouseleave(
-//    () => {
-//       active = false
-//    }
-//    );
-
-// //how the fuck am I gonna relearn this 
-
+   Tile = new Quad(0,0, 30, 30)
+   Source = new Quad(0,0, 90, 90)
+   Destination = new Quad(0, 0, 30, 30)
+ }
+ 
+ //Diffract part of image and place somewhere
+ function diffract(Tile, Src, Dest){
+   /*
+   -----------
+   | Q1 | Q2 |
+   |----+----|  
+   | Q3 | Q4 |
+   -----------
+   */
+   let origin_x = Tile.x, origin_y = Tile.y;
+   //Q1
+   push()
+     translate(origin_x, origin_y);
+     image(pic, Dest.x, Dest.y, Dest.w, Dest.h, Src.x, Src.y, Src.w, Src.h, COVER);
+   pop()
+   
+   //Q2
+   push();
+     translate(origin_x + Tile.w, origin_y);
+     scale(-1, 1);
+     image(pic, Dest.x, Dest.y, Dest.w, Dest.h, Src.x, Src.y, Src.w, Src.h, COVER);
+   pop();
+   
+   //Q3
+   push();
+     translate(origin_x, origin_y + Tile.h);
+     scale(1, -1);
+     image(pic, Dest.x, Dest.y, Dest.w, Dest.h, Src.x, Src.y, Src.w, Src.h, COVER);
+   pop();
+   
+   //Q4
+   push();
+     translate(origin_x + Tile.w, origin_y + Tile.h);
+     scale(-1, -1);
+     image(pic, Dest.x, Dest.y, Dest.w, Dest.h, Src.x, Src.y, Src.w, Src.h, COVER);
+   pop();
+ }
+ 
+ function draw() {
+   for(let i=0; i < w; i += Tile.w){
+     for(let j=0; j < h; j += Tile.h){
+         movingSource = Source
+         movingSource.y = Source.y + 2 * sin(mouseY * 0.01);
+         movingSource.x = Source.x + 2 * sin(mouseX * 0.01);
+         diffract(Tile, movingSource, Destination);
+         Tile.y = j;
+         Source.y = j;
+     }
+     Tile.x = i;
+     Source.x = i;
+   }
+ }
+ 
