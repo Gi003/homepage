@@ -1,14 +1,14 @@
 //Making of visible divs------------------------------------
-let elements = document.getElementsByClassName("vis");
-console.log(elements);
-console.log(elements[0].style.backgroundColor)
+// let elements = document.getElementsByClassName("vis");
+// console.log(elements);
+// console.log(elements[0].style.backgroundColor)
 
-for (let x of elements){
-    r = Math.random() * 255;
-    g = Math.random() * 255;
-    b = Math.random() * 255;
-    x.style.backgroundColor = `rgb(${r},${g},${b})`;
-}
+// for (let x of elements){
+//     r = Math.random() * 255;
+//     g = Math.random() * 255;
+//     b = Math.random() * 255;
+//     x.style.backgroundColor = `rgb(${r},${g},${b})`;
+// }
 
 //Scrollable Gallery---------------------------------------
 let array = document.getElementById("array");
@@ -37,7 +37,7 @@ document.addEventListener('keydown',function(event) {
     }
 })
 
-//Mouse Events
+//Mouse Events------------------------------------------------------
 
 function toggleFullScreen(element) {
 
@@ -63,18 +63,36 @@ function toggleFullScreen(element) {
     }
 
 //Click Event Listener --- class name returns an HTML collection - multiple elements
-img_nodelist = document.querySelectorAll("img");
-console.log(img_nodelist)
+img_nodelist = document.querySelectorAll(".thumbnail");
+left_arrow = document.getElementById("left");
+right_arrow = document.getElementById("right");
+console.log(img_nodelist);
 
 img_nodelist.forEach((img) => {
     let text = img.parentNode.nextElementSibling;
-    let img_container = img.parentNode
+    let img_container = img.parentNode;
+    let marker = img.nextElementSibling;
     let isExpanded = false;
+
+    marker.addEventListener('click', (event) => {
+        if(!isExpanded) {
+            img_container.style.width = '40%'
+            img_container.style.left = '25vw'
+            text.style.visibility = 'visible'
+            isExpanded = true;
+        } else{
+            img_container.style.width = '80%'
+            img_container.style.left = '50vw'
+            text.style.visibility = 'hidden'
+            isExpanded = false;
+        }
+    })
 
     //The expansion event listener might have to be 
     //larger area than image container
-    img.addEventListener('click', () => {
+    img.addEventListener('click', (event) => {
         if(!isExpanded) {
+            console.log("Child")
             img_container.style.width = '40%'
             img_container.style.left = '25vw'
             text.style.visibility = 'visible'
@@ -84,5 +102,16 @@ img_nodelist.forEach((img) => {
             toggleFullScreen(img);
         }
     })
+
 })
 
+left_arrow.addEventListener('click', (event) => {
+    console.log("Help");
+    position += 100;
+    array.style.transform = `translateX(${position}vw)`;
+})
+right_arrow.addEventListener('click', (event) => {
+    console.log("Why");
+    position -= 100;
+    array.style.transform = `translateX(${position}vw)`;
+})

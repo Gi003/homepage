@@ -1,6 +1,17 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(./Helvetica.ttf);
+  }
+  
+@font-face {
+    font-family: Helvetica-Oblique;
+    src: url(./Helvetica-Oblique.ttf);
+}
+
 html{
     margin:0;
     padding:0;
+    font-family: Helvetica;
 }
 
 body{
@@ -14,43 +25,67 @@ body{
 }
 
 /* Navigation Bar ------------------------------------------------------------------------- */
-#nav_pad{
-    height:5vh;
-}
-
 #nav{
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    height:5vh;
+    height:10vh;
+    width: 100vw;
+    z-index:1;
 }
 
 #nav-left {
     display:flex;
     gap:5%;
+    align-items: center;
+    margin: 0 0 0 2%;
 
 }
 
+a {
+    text-decoration:none;
+}
+
+.art-label {
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 10vh;
+    line-height: 10vh;
+}
+
 .nav-button {
-    margin: 1vh;
-    height: 1.5em;
-    width: 2.5em;
+    height: 5vh;
+    width: 10vh;
     
-    background-color: coral;
-    border-radius: 20px;
+    outline: 0.1em solid rgb(0, 0, 0);
+    stroke-width: 10px;
+    border-radius: 30px;
+
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-button p {
+    font-family: Helvetica;
+    font-size: 3vh;
+    line-height: 1.5em;
+    margin: 0 auto;
+    color: black;
 }
 
 /* Gallery contents ---------------------------------------------------------------------*/
 
 #array{
     width:400vw;
-    height:95vh;
+    height:100vh;
+    top: 0px;
     display:flex;
     transition: transform 0.8s;
 }
 
 .page{
     width:100vw;
-    height:95vh;
+    height:100vh;
     position:relative;
 }
 
@@ -58,7 +93,7 @@ body{
     position: absolute;
     height: 80%;
     width: 80%;
-    /* I want to constrain the amount of border around the image not the images 
+    /* I want to constrain the amoun of border around the image not the images 
     max size or max width. When i do that its hard to tell due to the different aspect ratios of each one */
     left:50vw;
     top: 50%;
@@ -66,6 +101,18 @@ body{
     transition: left 0.8s, width 0.8s;
 
     z-index: 1;
+}
+
+.marker {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(221, 221, 221);
+    top:50%;
+    left:100%;
+    border-radius: 100px;
+    transform: translate(-50%,-50%);
+    z-index: -1; 
 }
 
 .info{
@@ -88,13 +135,35 @@ img{
 }
 
 /* Length Indicator -------------------------------------*/
-.hr{
+.line_break {
+    position: fixed;
+    background-color: rgb(211, 211, 211);
+    width: 50%;
+    height: 8px;
+    z-index: 10;
+    bottom: 30px;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+
+  }
+
+.edge_flex{
     position:fixed;
-    height: 1px;
-    color: #ed1d61;
-    background: #ed1d61;
-    font-size: 0;
-    border: 0;
+    width:100vw;
+    height:100vh;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 2;
+    pointer-events: none;
+}
+.arrow {
+    height: 80%;
+    width: 5%;
+    z-index: 2;
+    pointer-events: all;
 }
 
 embed {

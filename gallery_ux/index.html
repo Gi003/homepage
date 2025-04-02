@@ -6,31 +6,37 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/artaddition.css">
     <script src="js/art.js" defer></script>
-    <title> Gallery Page</title>
+    <title> Design </title>
 </head>
 <body>
+    <!-- NAVIGATION -->
     <div id="nav">
         <div id="nav-left">
             <a href="../index.html">
-                <div class="nav-button"> Home</div>
+                <div class="nav-button"><p> Home </p></div>
             </a>
             <a href="../who.html">
-                <div class="nav-button">Grid?</div>
+                <div class="nav-button">
+                    <p>Grid</p></div>
             </a>
         </div>
     
-        <a ref="PLACEHOLDER">
-            <p> ART</p>
-        </a>
+        <div class="art-label">
+            <a ref="PLACEHOLDER">
+            DESIGN
+            </a>
+        </div>
     
     </div>
+    <!-- SLIDABLE -->
     <div class="vis" id="array">
         <div  class="page vis">
             <div class="vis image_container">
                 <embed src="../img/gallery_ux/Counter Strike Modification .pdf" allowfullscreen="allowfullscreen" type="application/pdf">
+                    <div class="marker vis"></div>
             </div>
             <div class="vis info">
-                <div class="essential">Oil on Canvas Angels 2024 3' x 2'</div>
+                <div class="essential">Counter Strike</div>
                 <div class="Tags?"></div>
                 <div class="paragraphical">
                     These pieces of work included 
@@ -42,7 +48,8 @@
         </div>
         <div class="page vis" >
                 <div class="vis image_container">
-                    <img src="../img/gallery/cycle.jpg"></a>
+                    <img class="thumbnail" src="../img/gallery_ux/Hollywood Hair Salon.png"></a>
+                    <div class="marker vis"></div>
                 </div>
                 <div class="vis info">
 
@@ -50,18 +57,25 @@
         </div>
         <div class="page vis">
                 <div class="vis image_container">
-                    <img src="../img/gallery/failed_poster.jpg"></a>
+                    <img class="thumbnail" src="../img/gallery_ux/supernova.jpg"></a>
+                    <div class="marker vis"></div>
                 </div>
                 <div class="vis info"></div>
         </div>
         <div class="page vis">
             <div class="vis image_container">
-                <img src="../img/gallery/me.jpg"></ad>
+                <img class="thumbnail" src="../img/gallery_ux/FAILED_poster.jpg"></a>
+                <div class="marker vis"></div>
             </div>
             <div class="vis info"></div>
         </div>
     </div>
-    <hr id="length-indicator">
+    <!-- STATIC UI CONTENT -->
+    <div class="line_break"></div>
+    <div class="edge_flex"> 
+        <img class="arrow" id="left" src="./left_arrow.svg" />
+        <img class="arrow" id="right" src="./right_arrow.svg" />
+    </div>
 
 </body>
 </html>
