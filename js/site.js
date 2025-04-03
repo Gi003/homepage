@@ -22,7 +22,7 @@ class Quad{
  let pic;
  
  function preload() {
-   pic = loadImage('/img/me.jpg');
+   pic = loadImage('../img/me.jpg');
  }
  
  function setup() {
